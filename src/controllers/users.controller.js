@@ -78,7 +78,8 @@ const updateUser = async (req, res) => {
         res.json(user);
     } catch (error) {
         logger.error(error.message);
-        res.status(500).json({message,
+        res.status(500).json({
+            message: error.message,
         }); 
     }
 }
@@ -101,7 +102,8 @@ const activeInactive = async (req, res) => {
     res.json(user);
     } catch (error) {
         logger.error(error.message);
-        res.status(500).json({message,
+        res.status(500).json({
+            message: error.message,
         }); 
     }
 }
@@ -116,7 +118,8 @@ const deleteUser = async (req, res) => {
         return res.sendStatus(204)
     } catch (error) {
         logger.error(error.message);
-        res.status(500).json({message,
+        res.status(500).json({
+            message: error.message,
         }); 
     }
 }

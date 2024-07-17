@@ -76,7 +76,7 @@ async function updateTask(req, res) {
             }
         );
         if (task[0] === 0) 
-            return res.status(404).json({message:'La tarea no se encuentra'}),
+            return res.status(404).json({message:'La tarea no se encuentra'})
         res.json(task)
     } catch (error) {
         logger.error(error.message);
@@ -95,7 +95,7 @@ async function taskDone(req,res) {
             {done},
             {where:{id, userId}});
         if (task[0] === 0)
-            return res.status(404).json({message:'La tarea no se encuentra'}),
+            return res.status(404).json({message:'La tarea no se encuentra'})
         res.json(task);
         
     } catch (error) {
